@@ -1,0 +1,11 @@
+div#show
+	h1.text-center ng-bind="ctrl.article.title"
+
+	img.show-img ng-src="{{ctrl.article.image}}"
+
+	div.content
+		p ng-bind="ctrl.article.description"
+
+	a.btn.btn-primary ui-sref="edit_article_path(article.post)" Edit
+	|&nbsp;
+	a.btn.btn-danger ng-click="ctrl.destroy(ctrl.article)" Destroy

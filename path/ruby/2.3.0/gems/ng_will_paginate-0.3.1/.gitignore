@@ -1,0 +1,14 @@
+/.bundle/
+/.yardoc
+/Gemfile.lock
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
+/spec/dummy/tmp/*
+*.cache
+/spec/dummy/log/*
+/spec/dummy/public/*
+.log

@@ -1,0 +1,9 @@
+= form_for @art_tag do |f|
+  - if @art_tag.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@art_tag.errors.count, "error")} prohibited this art_tag from being saved:"
+      ul
+        - @art_tag.errors.full_messages.each do |message|
+          li = message
+
+  .actions = f.submit

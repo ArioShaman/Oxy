@@ -6,9 +6,16 @@
 = require oxymoron/angular-ui-router
 = require oxymoron/ng-notify
 = require oxymoron
+= require turbolinks
 = require_self
 = require_tree ./controllers
+= require ckeditor/init
+= require ng_will_paginate
+
+= require jquery
+= require jquery_ujs
 */
+
 
 var app = angular.module("app", ['ui.router', 'oxymoron']);
 

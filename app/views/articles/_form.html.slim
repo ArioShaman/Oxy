@@ -1,0 +1,33 @@
+div#form-cont
+	= form_for Article.new do |f|
+		  .form-group
+		    = f.label :title
+		    = f.text_field :title, class: "form-control"
+		  .form-group
+		    = f.label :image
+		    = f.text_field :image, class: "form-control"
+
+		  .form-group
+
+		    = f.label :description
+		    
+		    = f.text_field :description, class: "form-control"
+
+
+		  .form-group
+		  	= f.label :content
+		  	= f.text_field :content, class: "form-control", rows: 10
+
+		  	
+		  	= f.select :category_id, Category.all.to_a.map { |w| w.id}
+
+		  	= f.select(:category_id) do
+				= Category.all.each do |c|
+					= content_tag(:option, c.body, value: c.id)
+		  	
+
+		 
+
+		  = f.submit "Save", class: "btn btn-primary"
+		  | &nbsp;
+		  a.btn.btn-danger ng-click="ctrl.destroy(ctrl.article)" ng-if="ctrl.article.id" Destroy

@@ -1,0 +1,19 @@
+h1 Listing art_tags
+
+table
+  thead
+    tr
+      th
+      th
+      th
+
+  tbody
+    - @art_tags.each do |art_tag|
+      tr
+        td = link_to 'Show', art_tag
+        td = link_to 'Edit', edit_art_tag_path(art_tag)
+        td = link_to 'Destroy', art_tag, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Art tag', new_art_tag_path

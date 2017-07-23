@@ -1,0 +1,20 @@
+div#content 
+  h1.text-center  All articles
+
+  div ng-repeat="article in ctrl.articles"
+    div.cont-block.col-lg-6
+      div.cover
+        
+        img ng-src="{{article.image}}"
+        a ui-sref="article_path(article)"
+          div.back
+      div.desc
+        a ui-sref="article_path(article)"
+          h3.text-center ng-bind="article.title"
+          h3 ng-bind="article.category_id"
+        div.desc-text
+          p ng-bind="article.description | limitTo: 400"
+        div.foot
+          p ng-bind="article.created_at | date: 'hh:mm a yyyy г.'"
+
+  
