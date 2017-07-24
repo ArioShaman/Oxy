@@ -1,9 +1,19 @@
-app.controller('ArticlesCtrl', ['Article', 'action', function (Article, action) {
+app.controller('ArticlesCtrl', ['$scope','$location','Article', 'action', function ($scope,$location,Article, action) {
     var ctrl = this;
     // Код отработает только для  '/posts'
     action('index', function(){
       ctrl.articles = Article.query();
+      
     });
+
+    ctrl.query = function (page) {
+      Article.get({
+        page: page
+      }, function (res) {
+        ctrl.articles = res;
+      });
+    }
+    ctrl.query($location.search().page || 1)
 
     // Вызовется для паттерна '/posts/:id'
     action('show', function (params){

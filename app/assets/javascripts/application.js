@@ -17,7 +17,7 @@
 */
 
 
-var app = angular.module("app", ['ui.router', 'oxymoron']);
+var app = angular.module("app", ['ui.router', 'oxymoron','ng-will-paginate']);
 
 app.config(['$stateProvider', function ($stateProvider) {
   $stateProvider.rails()

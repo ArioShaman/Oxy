@@ -13,4 +13,29 @@ Category.create(body: "Nature")
 Category.create(body: "World")
 
 Article.create(title: "Just title", description: "sadasdafsdsdg  gds x",
-	category_id: 1)
+	content:"hdasgjdk asfjaskf safasf asfafaf af asfa faf af afsdfsd fdfsdf dsfsdfsd fad",
+	image: "https://pp.userapi.com/c841134/v841134685/ec23/fMnhpOV-azM.jpg",category_id: 1)
+
+Article.create(title: "Just title", description: "sadasdafsdsdg  gds x",
+	content:"hdasgjdk asfjaskf safasf asfafaf af asfa faf af afsdfsd fdfsdf dsfsdfsd fad",
+	image: "https://pp.userapi.com/c841134/v841134685/ec23/fMnhpOV-azM.jpg",category_id: 1)
+
+Article.create(title: "Just title", description: "sadasdafsdsdg  gds x",
+	content:"hdasgjdk asfjaskf safasf asfafaf af asfa faf af afsdfsd fdfsdf dsfsdfsd fad",
+	image: "https://pp.userapi.com/c841134/v841134685/ec23/fMnhpOV-azM.jpg",category_id: 1)
+
+Article.create(title: "Just title", description: "sadasdafsdsdg  gds x",
+	content:"hdasgjdk asfjaskf safasf asfafaf af asfa faf af afsdfsd fdfsdf dsfsdfsd fad",
+	image: "https://pp.userapi.com/c841134/v841134685/ec23/fMnhpOV-azM.jpg",category_id: 1)
+
+Article.create(title: "Just title", description: "sadasdafsdsdg  gds x",
+	content:"hdasgjdk asfjaskf safasf asfafaf af asfa faf af afsdfsd fdfsdf dsfsdfsd fad",
+	image: "https://pp.userapi.com/c841134/v841134685/ec23/fMnhpOV-azM.jpg",category_id: 1)
+
+Article.create(title: "Just title", description: "sadasdafsdsdg  gds x",
+	content:"hdasgjdk asfjaskf safasf asfafaf af asfa faf af afsdfsd fdfsdf dsfsdfsd fad",
+	image: "https://pp.userapi.com/c841134/v841134685/ec23/fMnhpOV-azM.jpg",category_id: 1)
+
+Article.create(title: "Just title", description: "sadasdafsdsdg  gds x",
+	content:"hdasgjdk asfjaskf safasf asfafaf af asfa faf af afsdfsd fdfsdf dsfsdfsd fad",
+	image: "https://pp.userapi.com/c841134/v841134685/ec23/fMnhpOV-azM.jpg",category_id: 1)

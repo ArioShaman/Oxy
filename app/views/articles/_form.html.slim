@@ -18,12 +18,13 @@ div#form-cont
 		  	= f.label :content
 		  	= f.text_field :content, class: "form-control", rows: 10
 
-		  	
-		  	= f.select :category_id, Category.all.to_a.map { |w| w.id}
-
+		  .form-group
+		  	= f.label :category_id 
+		  		You You can choose category   
 		  	= f.select(:category_id) do
 				= Category.all.each do |c|
-					= content_tag(:option, c.body, value: c.id)
+					= content_tag(:option, c.body, value: c.id, class: "my-select")
+
 		  	
 
 		 

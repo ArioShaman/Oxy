@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20170721200636) do
   end
 
   add_index "articles", ["art_tags_id"], name: "index_articles_on_art_tags_id", using: :btree
+  add_index "articles", ["category_id"], name: "index_articles_on_category_id", using: :btree
 
   create_table "categories", force: :cascade do |t|
     t.string   "body"

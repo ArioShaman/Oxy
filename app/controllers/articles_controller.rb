@@ -6,6 +6,8 @@ before_action :set_post, only: [:show, :edit, :update, :destroy]
       format.html
       format.json {
         @articles = Article.all
+        #@articles = Article.paginate(:page => params[:page], :per_page => 4)
+
         render json: @articles
       }
     end
@@ -66,6 +68,6 @@ before_action :set_post, only: [:show, :edit, :update, :destroy]
     end
 
     def post_params
-      params.require(:article).permit(:title, :description, :image, :content)
+      params.require(:article).permit(:title, :description, :image, :content, :category_id)
     end
 end
