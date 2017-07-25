@@ -5,8 +5,9 @@ before_action :set_post, only: [:show, :edit, :update, :destroy]
     respond_to do |format|
       format.html
       format.json {
-        @articles = Article.all
-        #@articles = Article.paginate(:page => params[:page], :per_page => 4)
+        @articles = Article.paginate(:page => params[:page], :per_page => 4)
+        
+        #@articles = Article.all
 
         render json: @articles
       }

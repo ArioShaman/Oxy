@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'search/index'
+
   mount Ckeditor::Engine => '/ckeditor'
   resources :posts
   resources :articles

@@ -1,19 +1,24 @@
-app.controller('ArticlesCtrl', ['$scope','$location','Article', 'action', function ($scope,$location,Article, action) {
+app.controller('ArticlesCtrl', ['$scope','$location','Article', 'action','paginationService', function ($scope,$location,Article, action,paginationService) {
     var ctrl = this;
     // Код отработает только для  '/posts'
-    action('index', function(){
-      ctrl.articles = Article.query();
-      
+
+
+    action('index', function(response){
+      //ctrl.articles = Article.query({page: 1}); 
+      $scope.articles = Article.query({page: 1}) 
+
+      $scope.users= response;
+      $scope.totalitems = $scope.users.length;
+
+      //$scope.showMore = (secondPage) ->
+        //i = 0
+        //while i < secondPage.length
+          //$scope.articles.push(secondPage[i])
+          //i++
+        //$scope.nextPage++
+        //console.log("nextpage" + $scope.nextPage)   
     });
 
-    ctrl.query = function (page) {
-      Article.get({
-        page: page
-      }, function (res) {
-        ctrl.articles = res;
-      });
-    }
-    ctrl.query($location.search().page || 1)
 
     // Вызовется для паттерна '/posts/:id'
     action('show', function (params){

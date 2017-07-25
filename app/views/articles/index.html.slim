@@ -1,7 +1,9 @@
 div#content 
   h1.text-center  All articles
+  h1 ng-bind="totalitems"
 
-  div ng-repeat="article in ctrl.articles"
+  
+  div ng-repeat="article in articles"
     div.cont-block.col-lg-6
       div.cover
         
@@ -17,4 +19,9 @@ div#content
         div.foot
           p ng-bind="article.created_at | date: 'hh:mm a yyyy г.'"
 
+
+
+
+
+ 
   
